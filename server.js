@@ -27,7 +27,7 @@ app.use("/api/v1/post", postRoutes);
 app.use("/api/v1/auth", authRoutes);
 dbConnection();
 
-const PORT = 8080;
+const PORT = 8084;
 app.listen(PORT, () => {
     console.log("Server is running on port", PORT);
 })
