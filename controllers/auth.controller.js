@@ -4,7 +4,6 @@ import jwt from "jsonwebtoken";
 
 export const register = asyncHandler(async (req, res) => {
     const { name, email, password } = req.body;
-    // console.log(name, email)
     if (!name || !email | !password) {
         return res.status(401).json({ success: false, message: "all fileds are required" })
     };
@@ -64,7 +63,6 @@ export const getProfile = asyncHandler(async (req, res) => {
     };
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    // console.log("decoded", decoded)
     const user = await userModel.findById(decoded.id);
 
     if (!user) {

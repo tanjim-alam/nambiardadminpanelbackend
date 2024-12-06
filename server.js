@@ -7,12 +7,14 @@ import authRoutes from "./routes/auth.route.js";
 import morgan from "morgan";
 
 dotenv.config();
-
+// https://nambiard25adminpenal.vercel.app
 const app = express();
 const corsOptions = {
-    origin: "https://nambiard25adminpenal.vercel.app",
+    origin: "*",
     credentials: true
 }
+
+const PORT = 8081;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors(corsOptions))
@@ -27,7 +29,6 @@ app.use("/api/v1/post", postRoutes);
 app.use("/api/v1/auth", authRoutes);
 dbConnection();
 
-const PORT = 8084;
 app.listen(PORT, () => {
     console.log("Server is running on port", PORT);
 })
