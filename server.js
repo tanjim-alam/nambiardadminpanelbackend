@@ -10,7 +10,7 @@ dotenv.config();
 // https://nambiard25adminpenal.vercel.app
 const app = express();
 const corsOptions = {
-    origin: "*",
+    origin: "https://nambiard25adminpenal.vercel.app",
     credentials: true
 }
 
