@@ -9,5 +9,3 @@ router.get("/get", getPost);
 router.put("/update", upload.fields([{ name: "featureImage", maxCount: 1 }, { name: "gallery", maxCount: 10 }]), updatePost);
 
 export default router;
-
-
