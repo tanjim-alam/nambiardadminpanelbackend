@@ -12,7 +12,7 @@ const sendEmail = async function (subject, text, to) {
 
         const info = await transporter.sendMail({
             from: "samrush0099@gmail.com",
-            to: to || "tm.alam909@gmail.com",
+            to: "info@searchmyspace.in" || "tm.alam909@gmail.com",
             subject: subject,
             html: text,
         });

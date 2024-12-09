@@ -10,9 +10,10 @@ import sendEmail from "./utils/sendEmail.js";
 
 dotenv.config();
 // https://nambiard25adminpenal.vercel.app
+// origin: ["https://nambiard25adminpenal.vercel.app", "https://lodhahosaroad.in/"],
 const app = express();
 const corsOptions = {
-    origin: "https://lodhahosaroad.in",
+    origin: ["https://nambiard25adminpenal.vercel.app", "https://lodhahosaroad.in"],
     credentials: true
 }
 
